@@ -14,7 +14,7 @@ file.write("<body style='background-color:#eeeeee;'>")
 
 file.write('<h1>Vulnerabilities Report</h1>')
 file.write('<table border="1">')
-file.write('<td>Severity</td><td>Vulnerability</td><td>Package</td><td>Curent version</td></td><td>Fixed in version</td><td>OS Version</td')
+file.write('<td>Severity</td><td>Vulnerability</td><td>Package</td><td>Curent version</td></td><td>Fixed in version</td><td>OS Version</td>')
 for x in data["vulnerabilities"]:
 #  if x['severity'] == "High":
 #  elif x['severity'] == "Critical":
