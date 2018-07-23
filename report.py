@@ -23,5 +23,7 @@ for x in data["vulnerabilities"]:
     file.write("<p style='color:FFC500;'>" +  x['severity'] + " " + "<a href='" + x['link'] +"'>" +  x['vulnerability']+ "</a>" + " in " + x['namespace'] + " [" + x['featurename'] + "]" + "</p>")
   elif x['severity'] == "Low":
     file.write("<p style='color:0309DA;'>" +  x['severity'] + " " + "<a href='" + x['link'] +"'>" +  x['vulnerability']+ "</a>" + " in " + x['namespace'] + " [" + x['featurename'] + "]" + "</p>")
+  else:
+    file.write("<p>" +  x['severity'] + " " + "<a href='" + x['link'] +"'>" +  x['vulnerability']+ "</a>" + " in " + x['namespace'] + " [" + x['featurename'] + "]" + "</p>")
 file.write("</body>")
 file.write("</html>")
