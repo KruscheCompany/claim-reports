@@ -1,4 +1,4 @@
-#!/usr/local/bin/python
+#!/bin/python
 import os, sys
 import json
 from pprint import pprint
