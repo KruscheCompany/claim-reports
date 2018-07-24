@@ -328,12 +328,17 @@ file = open("report.html","w")
 
 file.write(html_header)
 for x in data["vulnerabilities"]:
-#  if x['severity'] == "High":
-#  elif x['severity'] == "Critical":
-#  elif x['severity'] == "Medium":
-#  elif x['severity'] == "Low":
-#  else:
+  if x['severity'] == "High":
+  	color = "red"
+  elif x['severity'] == "Critical":
+  	color = "#900C3F"
+  elif x['severity'] == "Medium":
+  	color = "blue"
+  elif x['severity'] == "Low":
+  	color = "green"
+  else:
+  	color = "grey"
   file.write('<tr>')
-  file.write("<td class='column1'>" +  x['severity'] + "</td><td class='column2'>" + "<a href='" + x['link'] +"' target='_blank'>" +  x['vulnerability']+ "</a></td class='column3'><td>" + x['featurename'] + "</td><td class='column4'>" + x['featureversion'] + "</td><td class='column5'>" + x['fixedby'] + "</td><td class='column6'>" + x['namespace'] + "</td>")
+  file.write("<td class='column1'><font color='" + color + "'><strong>" +  x['severity'] + "</strong><font></td><td class='column2'>" + "<a href='" + x['link'] +"' target='_blank'>" +  x['vulnerability']+ "</a></td class='column3'><td>" + x['featurename'] + "</td><td class='column4'>" + x['featureversion'] + "</td><td class='column5'>" + x['fixedby'] + "</td><td class='column6'>" + x['namespace'] + "</td>")
   file.write('</tr>')
 file.write(html_footer)
