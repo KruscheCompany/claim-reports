@@ -3,10 +3,10 @@ import os, sys
 import json
 from pprint import pprint
 
-with open('test.txt') as f:
+with open('gl-dependency-scanning-report.json') as f:
     data = json.load(f)
 
-file = open("test.html","w")
+file = open("report.html","w")
 
 html_header="""
 <!DOCTYPE html>
