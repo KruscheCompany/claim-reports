@@ -301,9 +301,9 @@ tbody tr:hover {
 								<th class="column1">Severity</th>
 								<th class="column2">Vulnerability</th>
 								<th class="column3">Package</th>
-								<th class="column3">Version</th>
-								<th class="column3">Fixed in Version</th>
-								<th class="column3">OS</th>
+								<th class="column4">Version</th>
+								<th class="column5">Fixed in Version</th>
+								<th class="column6">OS</th>
 							</tr>
 						</thead>
 						<tbody>
@@ -334,6 +334,6 @@ for x in data["vulnerabilities"]:
 #  elif x['severity'] == "Low":
 #  else:
   file.write('<tr>')
-  file.write("<td class='column1'>" +  x['severity'] + "</td><td class='column2'>" + "<a href='" + x['link'] +"'>" +  x['vulnerability']+ "</a></td class='column3'><td>" + x['featurename'] + "</td><td class='column4'>" + x['featureversion'] + "</td><td class='column5'>" + x['fixedby'] + "</td><td class='column6'>" + x['namespace'] + "</td>")
+  file.write("<td class='column1'>" +  x['severity'] + "</td><td class='column2'>" + "<a href='" + x['link'] +"' target='_blank'>" +  x['vulnerability']+ "</a></td class='column3'><td>" + x['featurename'] + "</td><td class='column4'>" + x['featureversion'] + "</td><td class='column5'>" + x['fixedby'] + "</td><td class='column6'>" + x['namespace'] + "</td>")
   file.write('</tr>')
 file.write(html_footer)
